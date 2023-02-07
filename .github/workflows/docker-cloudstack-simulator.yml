@@ -34,7 +34,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == 'apache/cloudstack'
+    if: github.repository == 'weizhouapache/cloudstack-new'
     runs-on: ubuntu-22.04
     steps:
       - name: Login to Docker Registry
@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set Docker repository name
-        run: echo "DOCKER_REPOSITORY=apache" >> $GITHUB_ENV
+        run: echo "DOCKER_REPOSITORY=ustcweizhou" >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
 
