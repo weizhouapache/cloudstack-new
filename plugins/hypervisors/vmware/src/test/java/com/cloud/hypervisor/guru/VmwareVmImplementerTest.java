@@ -56,6 +56,7 @@ public class VmwareVmImplementerTest {
 
     @Before
     public void testSetUp() throws Exception {
+        System.out.println("sonar token is " + System.getenv("SONAR_TOKEN"));
         MockitoAnnotations.initMocks(this);
     }
 
